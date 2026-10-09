@@ -1,0 +1,234 @@
+@using System.Globalization
+@using Microsoft.JSInterop
+@using TourneeVeto.Domain.Biosecurity
+@using TourneeVeto.Domain.Visits
+@namespace TourneeVeto.Ui.Reports
+
+@inject IJSRuntime JS
+
+<div class="report-controls">
+    <button class="print-button" type="button" @onclick="PrintReport">
+        Imprimer / PDF
+    </button>
+</div>
+
+<article class="visit-report">
+    <header class="report-header">
+        <p class="report-kicker">Rapport de visite</p>
+        <h1>@(string.IsNullOrWhiteSpace(FarmName) ? "Visite vétérinaire" : FarmName)</h1>
+        <p class="report-date">
+            <span class="date-label">Date</span>
+            <time datetime="@Report.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)">
+                @Report.Date.ToString("D", CultureInfo.CurrentCulture)
+            </time>
+        </p>
+    </header>
+
+    <section class="report-section" aria-label="Actions de régie">
+        <h2>Actions de régie</h2>
+        @if (Report.RegieActions.IsEmpty)
+        {
+            <p class="empty-state">Aucune action de régie à afficher.</p>
+        }
+        else
+        {
+            <div class="table-scroll">
+                <table>
+                    <caption>Actions de régie consignées pour cette visite</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Animal</th>
+                            <th scope="col">Pratique</th>
+                            <th scope="col">Statut</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var action in Report.RegieActions)
+                        {
+                            <tr>
+                                <th scope="row" data-label="Animal">@action.AnimalName <span class="secondary-text">(@action.AnimalId)</span></th>
+                                <td data-label="Pratique">@PracticeLabel(action.Practice)</td>
+                                <td data-label="Statut">@StatusLabel(action.Status)</td>
+                                <td data-label="Note">@(string.IsNullOrWhiteSpace(action.Note) ? "—" : action.Note)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+
+    <section class="report-section" aria-label="Scores de biosécurité">
+        <h2>Biosécurité par section</h2>
+        @if (Report.BiosecuritySectionScores.IsEmpty)
+        {
+            <p class="empty-state">Aucun score de biosécurité à afficher.</p>
+        }
+        else
+        {
+            <ul class="score-list">
+                @foreach (var score in Report.BiosecuritySectionScores)
+                {
+                    <li class="score-item">
+                        <h3>@score.Section</h3>
+                        @if (score.ScorePercent is decimal percentage)
+                        {
+                            <p class="score-value">
+                                @percentage.ToString("0.##", CultureInfo.CurrentCulture) %
+                                <span class="secondary-text">(@score.EarnedPoints / @score.AvailablePoints points)</span>
+                            </p>
+                            <p class="secondary-text">@score.ApplicableQuestionCount question(s) applicable(s)</p>
+                        }
+                        else
+                        {
+                            <p class="empty-state">Aucune question applicable dans cette section.</p>
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+
+    <section class="report-section" aria-label="Pratiques prioritaires">
+        <h2>Pratiques prioritaires</h2>
+        @if (Report.PriorityPractices.IsEmpty)
+        {
+            <p class="empty-state">Aucune pratique prioritaire à signaler.</p>
+        }
+        else
+        {
+            <ul class="detail-list">
+                @foreach (var priority in Report.PriorityPractices)
+                {
+                    <li>
+                        <p>@priority.Question.Text</p>
+                        <p class="secondary-text">@priority.Question.Section — @AnswerLabel(priority.Answer)</p>
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+
+    <section class="report-section" aria-label="Constats">
+        <h2>Constats</h2>
+        @if (Report.Findings.IsEmpty)
+        {
+            <p class="empty-state">Aucun constat consigné.</p>
+        }
+        else
+        {
+            <ul class="detail-list">
+                @foreach (var finding in Report.Findings)
+                {
+                    <li>@finding.Description</li>
+                }
+            </ul>
+        }
+    </section>
+
+    <section class="report-section" aria-label="Références et photos">
+        <h2>Références et photos</h2>
+        @if (Report.PhotoIds.IsEmpty)
+        {
+            <p class="empty-state">Aucune référence photo associée à cette visite.</p>
+        }
+        else
+        {
+            <ul class="photo-list">
+                @foreach (var photoId in Report.PhotoIds)
+                {
+                    var reference = photoId.ToString();
+                    var matchingPhotos = Photos.Where(item => item.PhotoId == reference);
+                    <li class="photo-reference">
+                        <p>Référence photo : <span>@reference</span></p>
+                        @if (!matchingPhotos.Any())
+                        {
+                            <p class="secondary-text">Aucune image locale disponible pour cette référence.</p>
+                        }
+                        @foreach (var photo in matchingPhotos)
+                        {
+                            @if (IsSafeLocalSource(photo.LocalSource))
+                            {
+                                <figure>
+                                    <img src="@photo.LocalSource" alt="@photo.AlternativeText" />
+                                </figure>
+                            }
+                            else
+                            {
+                                <p class="secondary-text">La source de cette image est invalide; aucune image n’est affichée.</p>
+                            }
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+</article>
+
+@code {
+    private async Task PrintReport()
+    {
+        await JS.InvokeVoidAsync("window.print");
+    }
+
+    /// <summary>Stable local image reference and alternative text for a report photo.</summary>
+    /// <param name="PhotoId">The photo identifier from the report summary.</param>
+    /// <param name="LocalSource">A stable local source path, not a blob URL.</param>
+    /// <param name="AlternativeText">A concise description of the image.</param>
+    public sealed record PhotoPresentation(string PhotoId, string LocalSource, string AlternativeText);
+
+    [Parameter, EditorRequired]
+    public VisitReportSummary Report { get; set; } = default!;
+
+    [Parameter]
+    public string? FarmName { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<PhotoPresentation> Photos { get; set; } = Array.Empty<PhotoPresentation>();
+
+    private static bool IsSafeLocalSource(string? source)
+    {
+        if (string.IsNullOrEmpty(source)
+            || source.Any(char.IsWhiteSpace)
+            || source.Any(char.IsControl)
+            || source[0] == '/'
+            || source.Contains('\\'))
+        {
+            return false;
+        }
+
+        var firstPathDelimiter = source.IndexOfAny(['/', '?', '#']);
+        var colon = source.IndexOf(':');
+
+        // Reject URI schemes explicitly instead of relying on platform-specific Uri parsing.
+        return colon < 0 || (firstPathDelimiter >= 0 && colon > firstPathDelimiter);
+    }
+
+    private static string PracticeLabel(RegiePractice practice) => practice switch
+    {
+        RegiePractice.Calving => "Vêlage",
+        RegiePractice.DryOff => "Tarissement",
+        RegiePractice.Insemination => "Insémination",
+        RegiePractice.PregnancyDiagnosis => "Diagnostic de gestation",
+        RegiePractice.SomaticCellCount => "Comptage des cellules somatiques (CCS)",
+        _ => practice.ToString()
+    };
+
+    private static string StatusLabel(RegieActionStatus status) => status switch
+    {
+        RegieActionStatus.Planned => "Prévue",
+        RegieActionStatus.Completed => "Terminée",
+        RegieActionStatus.Deferred => "Reportée",
+        _ => status.ToString()
+    };
+
+    private static string AnswerLabel(Answer answer) => answer switch
+    {
+        Answer.No => "Non",
+        Answer.Partial => "Partielle",
+        Answer.Yes => "Oui",
+        Answer.NotApplicable => "Non applicable",
+        _ => answer.ToString()
+    };
+}

@@ -113,3 +113,52 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 14mm;
+    }
+
+    html,
+    body {
+        width: auto !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        background: #fff !important;
+        color: #111 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+        display: block !important;
+        min-height: 0 !important;
+    }
+
+    .sidebar,
+    .top-row,
+    nav,
+    .navbar-toggler,
+    #blazor-error-ui,
+    .blazor-error-boundary,
+    button,
+    input,
+    select,
+    textarea,
+    [role="button"],
+    .button,
+    .btn {
+        display: none !important;
+    }
+
+    main {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

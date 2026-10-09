@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>TournéeVéto</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "outline": "#717974", "tertiary-container": "#5b2900", "secondary-container": "#bde5fd", "surface-tint": "#3f6654", "on-secondary-fixed": "#001e2b", "inverse-primary": "#a5d0ba", "background": "#f1fcf4", "secondary": "#3c6377", "on-tertiary-container": "#f2822e", "surface-container-highest": "#dae5dd", "primary-fixed-dim": "#a5d0ba", "primary-container": "#163e2e", "surface-container": "#e5f1e8", "on-surface-variant": "#414844", "tertiary": "#3b1800", "on-primary-fixed-variant": "#274e3d", "on-surface": "#141e19", "surface-dim": "#d1ddd5", "tertiary-fixed-dim": "#ffb689", "error": "#ba1a1a", "secondary-fixed-dim": "#a4cce3", "on-tertiary-fixed": "#311300", "inverse-on-surface": "#e8f4eb", "outline-variant": "#c1c8c2", "error-container": "#ffdad6", "on-primary-fixed": "#002115", "on-error": "#ffffff", "on-primary-container": "#80a994", "on-background": "#141e19", "primary-fixed": "#c1ecd5", "on-secondary-fixed-variant": "#234b5e", "secondary-fixed": "#c1e8ff", "on-tertiary": "#ffffff", "surface-container-high": "#dfebe3", "surface-container-low": "#ebf6ee", "surface": "#f1fcf4", "inverse-surface": "#28332d", "surface-variant": "#dae5dd", "on-secondary-container": "#41677c", "on-primary": "#ffffff", "on-error-container": "#93000a", "surface-bright": "#f1fcf4", "tertiary-fixed": "#ffdbc7", "primary": "#00281a", "on-tertiary-fixed-variant": "#733500" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.25rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "margin-desktop": "2rem", "margin-tablet": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem" }, "fontFamily": { "ear-tag-display": ["Inter"], "label-badge": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-md": ["Inter"], "headline-xl-mobile": ["Inter"], "label-tactile": ["Inter"], "headline-lg": ["Inter"] }, "fontSize": { "ear-tag-display": ["32px", { "lineHeight": "36px", "letterSpacing": "0.04em", "fontWeight": "900" }], "label-badge": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-tactile": ["16px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-4 flex flex-col justify-center"><div class="flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0"><img alt="Logo TournéeVéto" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U0tyxrTJb5Dxp1Zsrjd_udBdSx2sX_T4kimrE3t6c-zZGAB8fuNfGsj38z0kJNJOpXXGfm0-NJxO9H36bhkdU57B5vZBkJ87SgGvbBQc4-9qNitvwYOAglKRYx-xxecaGyUaUL8am_pj8m8SfLFb279shDY4P8q4MMi1Qa3QnI8ctXIytZObiUWOXPaGpKQW4O6xdMPyZ7Gn3LqoN6tAlxChcM_grVt7_XuOLsxo_NieE-Zed1FhhHU2m9"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md text-primary tracking-tight truncate leading-none">TournéeVéto</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rapport Visite</span></div></div><div class="flex items-center gap-2 shrink-0"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-surface-tint" style="font-size: 16px;">cloud_off</span><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wide hidden sm:inline">Hors ligne (local)</span><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wide sm:hidden">Hors ligne</span></div><div class="relative flex items-center shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9g_nzkNip_vqkRzyQiOQ10zke56r449t7TNdBUR3IAgXqF22J02LX0OXPiXLCAX5e22cu_OpONLtqo7jkApikmIHg0qFmXX2OILNl6xATEVrsFYqvbeM_Z9w9E4V8ppS0EAti8xmyY0aqUH0pRApCammumkZ3IDNUwHw4ANEuofqnuyh_Cyd63KUjKZW-YBBa2lOCLxeoT-Z3pOhn8rYN4xHWUZUC_KRoDcOWOu90lbZvpA-RWw79gQ"/><span class="sr-only">Dr. Émilie Gagnon, m.v.</span></div></div></div><div class="mt-1 flex items-center justify-between text-on-surface-variant"><span class="font-label-badge text-label-badge text-on-surface-variant tracking-normal truncate">Données fictives — Stockage local uniquement</span><span class="font-label-badge text-label-badge text-primary-container font-bold hidden xs:inline">QC • DMV</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full px-4 py-4 space-y-4">
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-badge text-label-badge uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-surface-tint" style="font-size: 16px;">verified</span>
+          Synthèse officielle
+        </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Rapport de visite vétérinaire</h2>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">clinical_notes</span>
+</div>
+</div>
+<div class="flex flex-col space-y-1.5 bg-surface-container-lowest rounded-lg p-3">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary shrink-0" style="font-size: 20px;">agriculture</span>
+<span class="font-body-md text-body-md font-bold truncate">Ferme Bel-Horizon inc.</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary shrink-0" style="font-size: 18px;">calendar_today</span>
+<span class="font-body-sm text-body-sm">14 octobre 2025</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-surface-tint shrink-0" style="font-size: 18px;">badge</span>
+<span class="font-body-sm text-body-sm">Dre Émilie Gagnon, m.v.</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-surface-tint shrink-0" style="font-size: 20px;">save</span>
+<span class="font-body-sm text-body-sm leading-tight text-on-surface">Brouillon enregistré localement à 10:14 sur cet appareil.</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 22px;">stethoscope</span>
+<h3 class="font-headline-md text-headline-md text-primary">Régie du troupeau</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge">12 vaches</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-3.5 space-y-2.5">
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-snug">
+        12 vaches examinées au cornadis
+      </p>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container rounded-lg p-2.5 flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Contrôles DG</span>
+<span class="font-body-lg text-body-lg font-bold text-primary">6 suivis</span>
+<span class="font-body-sm text-body-sm text-surface-tint">5 gestantes • 1 à réinséminer</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Tarissements</span>
+<span class="font-body-lg text-body-lg font-bold text-primary">3 validés</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Protocole sélectif OK</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Suivi CCS</span>
+<span class="font-body-lg text-body-lg font-bold text-primary">2 contrôles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Échantillons prélevés</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Santé Vêlage</span>
+<span class="font-body-lg text-body-lg font-bold text-primary">1 suivi</span>
+<span class="font-body-sm text-body-sm text-surface-tint">Involution normale</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 22px;">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-primary">Biosécurité d'étable</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge">Audit complété</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-3.5 space-y-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-tint" style="font-size: 20px;">check_circle</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">5 points conformes</span>
+</div>
+<div class="flex items-start gap-2 bg-error-container/30 rounded-lg p-2.5">
+<span class="material-symbols-outlined text-on-tertiary-container shrink-0 mt-0.5" style="font-size: 20px;">warning</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-tertiary">1 point à améliorer</span>
+<span class="font-body-sm text-body-sm text-on-surface">Renouvellement de litière dans le box de vêlage avant prochaine mise bas.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 22px;">edit_note</span>
+<h3 class="font-headline-md text-headline-md text-primary">Commentaires &amp; Recommandations</h3>
+</div>
+<span class="font-label-badge text-label-badge text-surface-tint flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 16px;">lock</span>
+        Local
+      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Ces remarques figureront sur l'exemplaire remis au producteur et au dossier de suivi.
+    </p>
+<div class="relative bg-surface-container-lowest rounded-lg p-1">
+<textarea class="w-full bg-transparent p-3 font-body-md text-body-md text-on-surface focus:outline-none resize-none leading-relaxed" id="recommendations-input" placeholder="Saisir vos recommandations..." rows="5">Bonne tenue globale du troupeau en stabulation libre. La reprise de cyclicité est satisfaisante. Concernant le box de vêlage, nous avons convenu d'un paillage plus généreux entre chaque vêlage pour optimiser le démarrage des veaux. Prochaine visite de suivi de régie prévue le 11 novembre 2025.</textarea>
+<div class="flex items-center justify-between px-3 py-1.5 text-on-surface-variant bg-surface-container-low rounded">
+<span class="font-label-badge text-label-badge text-on-surface-variant" id="char-counter">352 caractères</span>
+<button class="font-label-badge text-label-badge text-primary-container flex items-center gap-1 hover:underline" id="auto-phrase-btn" type="button">
+<span class="material-symbols-outlined" style="font-size: 14px;">auto_fix_high</span>
+          Ajouter formule type
+        </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-3 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">offline_pin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-tactile text-label-tactile text-primary leading-tight">Génération locale instantanée</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">L'export génère directement le document sur votre appareil sans passer par internet.</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3 pt-2">
+<button class="w-full min-h-[56px] px-4 py-3 rounded-xl bg-primary-container text-on-primary flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-md font-label-tactile text-label-tactile" id="preview-modal-open" type="button">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+<span>Aperçu avant impression</span>
+</button>
+<button class="w-full min-h-[56px] px-4 py-3 rounded-xl bg-secondary text-on-secondary flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-sm font-label-tactile text-label-tactile" id="pdf-export-trigger" type="button">
+<span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+<span>Exporter en PDF</span>
+</button>
+<button class="w-full min-h-[56px] px-4 py-3 rounded-xl bg-surface-container-lowest text-primary-container flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-sm font-label-tactile text-label-tactile" id="save-draft-btn" type="button">
+<span class="material-symbols-outlined text-2xl">bookmark</span>
+<span>Enregistrer le brouillon</span>
+</button>
+</div>
+<div class="text-center py-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Données fictives — Usage exclusif interne à l'élevage Bel-Horizon.</span>
+</div>
+<div class="fixed inset-0 z-50 bg-black/60 hidden flex-col justify-end" id="preview-sheet">
+<div class="bg-surface-container-lowest rounded-t-2xl max-h-[751px] flex flex-col w-full max-w-xl mx-auto shadow-2xl overflow-hidden">
+<div class="p-4 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">print</span>
+<h4 class="font-headline-md text-headline-md text-primary">Aperçu document officiel</h4>
+</div>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high" id="preview-modal-close" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 overflow-y-auto space-y-4">
+<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-headline-md text-headline-md text-primary">CLINIQUE VÉTÉRINAIRE RURALE</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dre Émilie Gagnon, m.v. • DMV QC 4892</p>
+</div>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-on-surface font-label-badge text-label-badge">OR-2025-1014</span>
+</div>
+<div class="h-0.5 bg-outline-variant/30 my-2"></div>
+<p class="font-body-md text-body-md text-on-surface font-bold">Élevage : Ferme Bel-Horizon inc.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Date de visite : 14 octobre 2025 (Visite mensuelle de régie)</p>
+</div>
+<div class="space-y-1">
+<p class="font-label-tactile text-label-tactile text-primary">1. Actes de reproduction &amp; santé de troupeau</p>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-low p-2.5 rounded">
+            • 12 sujets examinés.<br/>
+            • DG Échographie : 5 confirmées gestantes (tags #3102, #3188, #3401, #3422, #3550).<br/>
+            • Suivi non-gestante : #3299 - corps jaune absent, planifiée pour synchronisation.<br/>
+            • Tarissements : #2904, #2981, #3002 validés sans antibiothérapie intramammaire préventive.
+          </p>
+</div>
+<div class="space-y-1">
+<p class="font-label-tactile text-label-tactile text-primary">2. Statut Biosécurité</p>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-low p-2.5 rounded">
+            Audit régulier : Conforme (5/6). Recommandation prioritaire : apport de paille supplémentaire dans le box de vêlage.
+          </p>
+</div>
+<div class="space-y-1">
+<p class="font-label-tactile text-label-tactile text-primary">3. Instructions transmises à l'éleveur</p>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-low p-2.5 rounded italic" id="preview-recom-sync">
+            Bonne tenue globale du troupeau en stabulation libre...
+          </p>
+</div>
+</div>
+<div class="p-4 bg-surface-container flex gap-2">
+<button class="w-full min-h-[56px] rounded-xl bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2" id="preview-confirm-print" type="button">
+<span class="material-symbols-outlined">print</span>
+          Lancer l'impression locale
+        </button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-24 left-4 right-4 max-w-md mx-auto bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none z-50" id="toast-notification">
+<span class="material-symbols-outlined text-inverse-primary" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold" id="toast-message">Action enregistrée localement</span>
+</div>
+</div>
+<script>
+  (function() {
+    const textarea = document.getElementById('recommendations-input');
+    const charCounter = document.getElementById('char-counter');
+    const autoPhraseBtn = document.getElementById('auto-phrase-btn');
+    const previewBtn = document.getElementById('preview-modal-open');
+    const previewClose = document.getElementById('preview-modal-close');
+    const previewSheet = document.getElementById('preview-sheet');
+    const previewSync = document.getElementById('preview-recom-sync');
+    const printBtn = document.getElementById('preview-confirm-print');
+    const exportPdfBtn = document.getElementById('pdf-export-trigger');
+    const saveDraftBtn = document.getElementById('save-draft-btn');
+    const toast = document.getElementById('toast-notification');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+
+    function updateChars() {
+      if (!textarea || !charCounter) return;
+      charCounter.textContent = textarea.value.length + ' caractères';
+    }
+
+    if (textarea) {
+      textarea.addEventListener('input', updateChars);
+    }
+
+    function showToast(message, icon = 'check_circle') {
+      if (!toast || !toastMsg || !toastIcon) return;
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    if (autoPhraseBtn && textarea) {
+      autoPhraseBtn.addEventListener('click', () => {
+        const addon = "\nRe-vérifier la température des vêlages récents sous 48h.";
+        textarea.value += addon;
+        updateChars();
+        showToast("Formule type ajoutée avec succès");
+      });
+    }
+
+    if (previewBtn && previewSheet && previewSync && textarea) {
+      previewBtn.addEventListener('click', () => {
+        previewSync.textContent = textarea.value;
+        previewSheet.classList.remove('hidden');
+        previewSheet.classList.add('flex');
+      });
+    }
+
+    if (previewClose && previewSheet) {
+      previewClose.addEventListener('click', () => {
+        previewSheet.classList.add('hidden');
+        previewSheet.classList.remove('flex');
+      });
+    }
+
+    if (printBtn && previewSheet) {
+      printBtn.addEventListener('click', () => {
+        previewSheet.classList.add('hidden');
+        previewSheet.classList.remove('flex');
+        showToast("Envoi vers l'imprimante thermique locale...", "print");
+      });
+    }
+
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        showToast("PDF généré localement dans « Téléchargements »", "picture_as_pdf");
+      });
+    }
+
+    if (saveDraftBtn) {
+      saveDraftBtn.addEventListener('click', () => {
+        showToast("Brouillon sauvegardé en cache local", "save");
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="flex justify-between items-center h-20 px-2 max-w-xl mx-auto"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-2 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="tournee-du-jour" href="#"><span class="material-symbols-outlined" style="font-size: 24px;">calendar_month</span><span class="font-label-badge text-label-badge mt-0.5">Tournée</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-2 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="elevages" href="#"><span class="material-symbols-outlined" style="font-size: 24px;">agriculture</span><span class="font-label-badge text-label-badge mt-0.5">Élevages</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-2 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="regie-troupeau" href="#"><span class="material-symbols-outlined" style="font-size: 24px;">stethoscope</span><span class="font-label-badge text-label-badge mt-0.5">Régie</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-2 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="biosecurite" href="#"><span class="material-symbols-outlined" style="font-size: 24px;">verified_user</span><span class="font-label-badge text-label-badge mt-0.5">Biosécurité</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-2 py-1 rounded-lg transition-colors bg-primary-container text-on-primary font-bold shadow-sm" data-path="rapport-visite" href="#"><span class="material-symbols-outlined" style="font-size: 24px;">description</span><span class="font-label-badge text-label-badge mt-0.5">Rapport</span></a></div></nav></body></html>

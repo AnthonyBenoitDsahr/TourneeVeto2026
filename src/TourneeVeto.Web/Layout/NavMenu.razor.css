@@ -1,0 +1,138 @@
+.nav-header {
+    display: flex;
+    min-height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.brand {
+    display: flex;
+    min-height: var(--touch-target-comfortable);
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: var(--touch-target-comfortable);
+    height: var(--touch-target-comfortable);
+    place-items: center;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-extrabold);
+}
+
+.brand-copy {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.brand-copy strong {
+    font-size: var(--font-size-md);
+}
+
+.brand-copy > span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+}
+
+.navbar-toggler {
+    display: grid;
+    width: var(--touch-target-comfortable);
+    height: var(--touch-target-comfortable);
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 1.25rem;
+    height: 2px;
+    background: currentColor;
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    position: absolute;
+    left: 0;
+    content: "";
+}
+
+.menu-icon::before {
+    top: -0.4rem;
+}
+
+.menu-icon::after {
+    top: 0.4rem;
+}
+
+.nav-scrollable {
+    padding: var(--space-3) var(--space-4);
+}
+
+.nav-item ::deep .nav-link {
+    display: flex;
+    min-height: var(--touch-target-comfortable);
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+}
+
+.nav-item ::deep .nav-link.active {
+    background: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+}
+
+.nav-item ::deep .nav-link:hover {
+    background: var(--color-surface-high);
+    color: var(--color-text);
+}
+
+.nav-icon {
+    display: grid;
+    width: var(--touch-target);
+    height: var(--touch-target);
+    place-items: center;
+    font-size: var(--font-size-heading-md);
+}
+
+.navbar-toggler:focus-visible,
+.brand:focus-visible,
+.nav-item ::deep .nav-link:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+@media (min-width: 40.0625rem) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .collapse {
+        display: block;
+    }
+
+    .nav-scrollable {
+        overflow-y: auto;
+    }
+}

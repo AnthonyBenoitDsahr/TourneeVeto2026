@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TournéeVéto</title>
+</head>
+
+<body>
+    <script>
+        const basePath = "__BASE_PATH__";
+        const requestedUrl = new URL(window.location.href);
+        const route = `${requestedUrl.pathname.slice(basePath.length)}${requestedUrl.search}${requestedUrl.hash}`;
+        const destination = new URL(basePath, requestedUrl.origin);
+        destination.searchParams.set("p", route);
+        window.location.replace(destination);
+    </script>
+</body>
+
+</html>

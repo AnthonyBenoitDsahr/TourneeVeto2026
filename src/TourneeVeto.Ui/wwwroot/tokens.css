@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --color-canvas: #f1fcf4;
+  --color-surface: #ffffff;
+  --color-surface-low: #ebf6ee;
+  --color-surface-container: #e5f1e8;
+  --color-surface-high: #dfebe3;
+  --color-surface-highest: #dae5dd;
+  --color-surface-dim: #d1ddd5;
+  --color-surface-inverse: #28332d;
+
+  /* Text and structure */
+  --color-text: #141e19;
+  --color-text-muted: #414844;
+  --color-text-inverse: #e8f4eb;
+  --color-primary: #00281a;
+  --color-primary-hover: #163e2e;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #c1ecd5;
+  --color-on-primary-container: #002115;
+  --color-border: #6b746e;
+  --color-border-subtle: #8a928c;
+  --color-focus: #00281a;
+
+  /* Status colors: solid foregrounds, plus accessible container pairs */
+  --color-urgent: #ba1a1a;
+  --color-on-urgent: #ffffff;
+  --color-urgent-container: #ffdad6;
+  --color-on-urgent-container: #93000a;
+  --color-warning: #733500;
+  --color-on-warning: #ffffff;
+  --color-warning-container: #ffdbc7;
+  --color-on-warning-container: #733500;
+  --color-ok: #274e3d;
+  --color-on-ok: #ffffff;
+  --color-ok-container: #c1ecd5;
+  --color-on-ok-container: #002115;
+  --color-info: #3c6377;
+  --color-on-info: #ffffff;
+  --color-info-container: #c1e8ff;
+  --color-on-info-container: #234b5e;
+
+  /* AA checks: text/surface 17.08:1, muted/surface 9.40:1,
+     border/surface 4.83:1; all status text/container pairs are >= 6.46:1.
+     The original outline (#717974) measured 4.48:1 on white and was darkened. */
+
+  /* Typography */
+  --font-family-sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --font-family-display: var(--font-family-sans);
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-heading-sm: 1.25rem;
+  --font-size-heading-md: 1.375rem;
+  --font-size-heading-lg: 1.625rem;
+  --font-size-heading-xl-mobile: 1.75rem;
+  --font-size-heading-xl: 2.25rem;
+  --font-size-animal-id: 2rem;
+  --line-height-tight: 1.125;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.5;
+  --line-height-relaxed: 1.625;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --gutter-mobile: 1rem;
+  --gutter-tablet: 1.5rem;
+  --gutter-desktop: 1.5rem;
+  --margin-desktop: 2rem;
+
+  /* Shape and touch */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  --touch-target: 44px;
+  --touch-target-comfortable: 56px;
+
+  /* Elevation and print */
+  --shadow-card: 0 1px 3px rgb(20 30 25 / 12%);
+  --shadow-raised: 0 4px 12px rgb(20 30 25 / 12%);
+  --color-print-text: #000000;
+  --color-print-paper: #ffffff;
+}

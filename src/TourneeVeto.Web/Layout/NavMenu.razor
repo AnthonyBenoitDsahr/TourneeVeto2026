@@ -1,0 +1,38 @@
+<header class="nav-header">
+    <a class="brand" href="" aria-label="TournéeVéto, accueil">
+        <span class="brand-mark" aria-hidden="true">TV</span>
+        <span class="brand-copy">
+            <strong>TournéeVéto</strong>
+            <span>Santé du troupeau</span>
+        </span>
+    </a>
+    <button type="button"
+            class="navbar-toggler"
+            aria-label="Afficher ou masquer le menu"
+            aria-expanded="@(!collapseNavMenu)"
+            @onclick="ToggleNavMenu">
+        <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+</header>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="nav flex-column" aria-label="Navigation principale">
+        <div class="nav-item">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="nav-icon" aria-hidden="true">⌂</span>
+                Accueil
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-fixed":"#311300","secondary":"#3c6377","error-container":"#ffdad6","surface":"#f1fcf4","secondary-fixed-dim":"#a4cce3","on-secondary-fixed":"#001e2b","surface-container-high":"#dfebe3","tertiary-container":"#5b2900","on-tertiary-container":"#f2822e","surface-variant":"#dae5dd","inverse-primary":"#a5d0ba","primary":"#00281a","on-secondary":"#ffffff","inverse-surface":"#28332d","error":"#ba1a1a","primary-fixed-dim":"#a5d0ba","on-error-container":"#93000a","on-background":"#141e19","secondary-container":"#bde5fd","on-secondary-container":"#41677c","surface-bright":"#f1fcf4","primary-container":"#163e2e","on-error":"#ffffff","on-secondary-fixed-variant":"#234b5e","tertiary-fixed-dim":"#ffb689","surface-container-low":"#ebf6ee","on-primary-fixed":"#002115","tertiary-fixed":"#ffdbc7","surface-tint":"#3f6654","on-primary-fixed-variant":"#274e3d","tertiary":"#3b1800","surface-container":"#e5f1e8","on-surface-variant":"#414844","on-tertiary-fixed-variant":"#733500","on-surface":"#141e19","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-tertiary":"#ffffff","on-primary-container":"#80a994","surface-dim":"#d1ddd5","background":"#f1fcf4","surface-container-highest":"#dae5dd","outline-variant":"#c1c8c2","inverse-on-surface":"#e8f4eb","outline":"#717974","primary-fixed":"#c1ecd5","secondary-fixed":"#c1e8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"2rem","margin":"1rem","margin-tablet":"1.5rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-md":"0.75rem","gutter":"1rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-badge":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"label-tactile":["Inter"],"body-lg":["Inter"],"ear-tag-display":["Inter"],"headline-lg":["Inter"]},"fontSize":{"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"700"}],"label-badge":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-tactile":["16px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"26px","fontWeight":"500"}],"ear-tag-display":["32px",{"lineHeight":"36px","letterSpacing":"0.04em","fontWeight":"900"}],"headline-lg":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between pt-6 pb-6"><div class="flex flex-col"><div class="px-6 pb-6 flex items-center gap-3"><div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_0px_#141e19]"><span class="material-symbols-outlined text-[26px]">medical_services</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-tight">TournéeVéto</span><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Santé du troupeau</span></div></div><div class="px-4 py-2"><div class="p-3 bg-surface-container rounded-lg flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span class="font-body-sm text-body-sm text-on-surface">Session active</span></div><span class="font-label-badge text-label-badge bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">v2.4 field</span></div></div><nav class="mt-4 px-4 flex flex-col gap-2" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[0_2px_0px_#141e19]"><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="tournee-du-jour" href="#"><span class="material-symbols-outlined text-[24px]">route</span><span class="font-body-md text-body-md">Tournée du jour</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="fiches-delevage" href="#"><span class="material-symbols-outlined text-[24px]">agriculture</span><span class="font-body-md text-body-md">Fiches d'élevage</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="grille-de-regie" href="#"><span class="material-symbols-outlined text-[24px]">table_chart</span><span class="font-body-md text-body-md">Grille de régie</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="bilan-de-biosecurite" href="#"><span class="material-symbols-outlined text-[24px]">health_and_safety</span><span class="font-body-md text-body-md">Bilan de biosécurité</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="rapport-de-visite" href="#"><span class="material-symbols-outlined text-[24px]">description</span><span class="font-body-md text-body-md">Rapport de visite</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="apercu-et-impression" href="#"><span class="material-symbols-outlined text-[24px]">print</span><span class="font-body-md text-body-md">Aperçu &amp; Impression</span></a></nav></div><div class="px-4 flex flex-col gap-3"><div class="p-3 bg-surface-container rounded-lg flex flex-col gap-1"><span class="font-body-sm text-body-sm text-on-surface">Région Estrie</span><span class="font-label-badge text-label-badge text-on-surface-variant">Secteur Coaticook &amp; environs</span></div><div class="flex items-center justify-between px-2 pt-2 text-on-surface-variant font-body-sm text-body-sm"><span>Synchronisation auto</span><span class="material-symbols-outlined text-[20px] text-primary">sync_saved_locally</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span><span class="font-body-sm text-body-sm font-semibold">Mardi 14 oct. 2025</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[18px] text-secondary">cloud</span><span class="font-body-sm text-body-sm">Coaticook 8°C</span></div><div class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[18px] text-primary">save</span><span class="font-label-badge text-label-badge uppercase tracking-wide">Mode hors-ligne actif (SQLite local)</span></div></div><div class="flex items-center gap-4"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-bold text-on-surface leading-tight">Dre Émilie Gagnon, m.v.</span><span class="font-label-badge text-label-badge text-on-surface-variant">Médecine des ruminants</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative w-full pt-16 bg-surface px-margin-desktop"><div class="flex flex-col w-full pb-16">
+<!-- BANNIÈRE DE STATUT OPÉRATIONNEL HORS-LIGNE LOCAL -->
+<div class="w-full bg-surface-container-high rounded-xl p-4 mb-6 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-primary">Cache SQLite Local</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Données d'élevage chargées en mémoire locale • 100% autonome en stabulation</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary">wifi_off</span>
+<span>Dernière synchro cloud : Ce matin à 06h15</span>
+</div>
+</div>
+<!-- EN-TÊTE D'ÉLEVAGE ET ACTION DIRECTE DE VISITE -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-8 mb-8 shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<div class="flex flex-col gap-3 max-w-3xl">
+<div class="flex flex-wrap items-center gap-3">
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface">Ferme Bel-Horizon inc.</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge px-3 py-1 rounded-full uppercase">NIP QC-4829-01</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-3 py-1 rounded-full">Holstein • Pur-sang</span>
+</div>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+<span>1420 rang 4 Ouest, Coaticook (Québec)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">person</span>
+<span>Marc Tremblay (Producteur)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">phone</span>
+<span class="font-semibold text-on-surface">819-555-0144</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">precision_manufacturing</span>
+<span>Stabulation libre • 2 robots de traite <strong>Lely Astronaut A5</strong> (Vêlage continu)</span>
+</div>
+</div>
+<!-- COMMANDE MAJEURE TACTILE -->
+<div class="flex flex-col sm:flex-row xl:flex-col items-stretch xl:items-end gap-3 shrink-0">
+<button class="h-14 px-8 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-tactile text-label-tactile flex items-center justify-center gap-3 shadow-md active:translate-y-0.5 transition-all" id="resume-visit-btn">
+<span class="material-symbols-outlined text-[26px]">play_circle</span>
+<span>Reprendre la visite en direct</span>
+</button>
+<div class="flex items-center justify-between xl:justify-end gap-3 px-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avancement du protocole :</span>
+<span class="font-label-badge text-label-badge bg-surface-container-high px-2.5 py-1 rounded text-primary">8 / 12 effectués (66%)</span>
+</div>
+</div>
+</div>
+<!-- BARRE D'INDICATEURS CLÉS DU TROUPEAU (5 CARTES) -->
+<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-body-sm text-body-sm uppercase tracking-wide">Total Troupeau</span>
+<span class="material-symbols-outlined text-[22px] text-primary">groups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-ear-tag-display text-ear-tag-display text-on-surface">142</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">têtes</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-2">100% identifiées RFID</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-body-sm text-body-sm uppercase tracking-wide">En Lactation</span>
+<span class="material-symbols-outlined text-[22px] text-secondary">water_drop</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-ear-tag-display text-ear-tag-display text-primary">118</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vaches</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-2">Moy. 33.4 kg / j</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-body-sm text-body-sm uppercase tracking-wide">Vaches Taries</span>
+<span class="material-symbols-outlined text-[22px] text-on-surface-variant">bedtime</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-ear-tag-display text-ear-tag-display text-on-surface">24</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">en prép.</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-2">Dont 6 en tarissement proche</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-body-sm text-body-sm uppercase tracking-wide">À Examiner Ce Jour</span>
+<span class="material-symbols-outlined text-[22px] text-tertiary-container">assignment_late</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-ear-tag-display text-ear-tag-display text-tertiary-container">12</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">suivis</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 66%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-body-sm text-body-sm uppercase tracking-wide">Moyenne CCS Troupeau</span>
+<span class="material-symbols-outlined text-[22px] text-secondary">analytics</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-ear-tag-display text-ear-tag-display text-on-surface">185k</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">cell/mL</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary mt-2">Norme satisfaisante &lt;200k</span>
+</div>
+</div>
+<!-- DISPOSITION PRINCIPALE 2 VOLETS (BENTO / TRIAGE GRID) -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- VOLET PRINCIPAL : GRILLE DES SUIVIS CLINIQUES (8 COLS) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- ENTÊTE DE SECTION ET FILTRES RAPIDES TACTILES -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[28px] text-primary">checklist</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Animaux du protocole d'aujourd'hui</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4 animaux prioritaires en attente d'intervention directe</p>
+</div>
+</div>
+<button class="h-14 px-5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all" id="add-unplanned-btn">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span>+ Ajouter un animal non planifié</span>
+</button>
+</div>
+<!-- FILTRES GLOVED-FRIENDLY (MIN 56PX DE LARGEUR / MIN 44PX HAUTEUR) -->
+<div class="flex flex-wrap items-center gap-2 pt-2">
+<button class="filter-chip px-5 py-3 rounded-lg bg-primary-container text-on-primary font-label-badge text-label-badge flex items-center gap-2 shadow-sm" data-filter="all">
+<span>Tous les 12</span>
+</button>
+<button class="filter-chip px-5 py-3 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge flex items-center gap-2" data-filter="pending">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>4 Reste à faire</span>
+</button>
+<button class="filter-chip px-5 py-3 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge flex items-center gap-2" data-filter="repro">
+<span>Repro / DG (2)</span>
+</button>
+<button class="filter-chip px-5 py-3 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge flex items-center gap-2" data-filter="patho">
+<span>Pathologies / CCS (2)</span>
+</button>
+</div>
+</div>
+<!-- LISTE DES CARTES DES BÊTES PRIORITAIRES -->
+<div class="flex flex-col gap-4" id="cow-priority-list">
+<!-- CARTE 1: #4120 Margot -->
+<div class="animal-card bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center shrink-0">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-on-surface-variant">Boucle</span>
+<span class="font-ear-tag-display text-ear-tag-display leading-tight">#4120</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface">Margot</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-0.5 rounded">Lactation 3</span>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded">220 Jours de lait</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">schedule</span>
+<span class="font-semibold text-tertiary-container">Tarissement prévu sous 7 jours</span>
+<span>• Production actuelle : 18.2 kg/j</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>En attente</span>
+</span>
+</div>
+</div>
+<!-- LIGNE D'ACTIONS RAPIDES TACTILES (56PX HAUTEUR MIN) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+<button class="h-14 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Valider</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">medication</span>
+<span>Traitement</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">edit_note</span>
+<span>Noter</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">front_hand</span>
+<span>Palpation</span>
+</button>
+</div>
+</div>
+<!-- CARTE 2: #3891 Belle -->
+<div class="animal-card bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex flex-col items-center justify-center shrink-0">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-on-secondary-fixed">Boucle</span>
+<span class="font-ear-tag-display text-ear-tag-display leading-tight">#3891</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface">Belle</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge px-2.5 py-0.5 rounded">Lactation 2</span>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded">34 Jours post-IA</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">sound_sampler</span>
+<span class="font-semibold text-secondary">DG Échographie requise</span>
+<span>• Inséminée le 10 sept. (Taureau: Delta-Lambda)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>Priorité 1</span>
+</span>
+</div>
+</div>
+<!-- LIGNE D'ACTIONS RAPIDES TACTILES -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+<button class="h-14 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Valider Gest.</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">cancel</span>
+<span>Non-Gestante</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">edit_note</span>
+<span>Noter ovaire</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">front_hand</span>
+<span>Palpation</span>
+</button>
+</div>
+</div>
+<!-- CARTE 3: #4305 Lili -->
+<div class="animal-card bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex flex-col items-center justify-center shrink-0">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-on-tertiary-fixed">Boucle</span>
+<span class="font-ear-tag-display text-ear-tag-display leading-tight">#4305</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface">Lili</span>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded">Lactation 1 (Primipare)</span>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded">88 Jours de lait</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">warning</span>
+<span class="font-semibold text-tertiary-container">CCS Élevée (740k) • Prélèvement stérile</span>
+<span>• Conductivité robot anormale Q-AR</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Bactériologie</span>
+</span>
+</div>
+</div>
+<!-- LIGNE D'ACTIONS RAPIDES TACTILES -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+<button class="h-14 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">science</span>
+<span>Kit Prélèvement</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">medication</span>
+<span>Protocole Intramam.</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">edit_note</span>
+<span>Noter quartier</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+<span>Valider</span>
+</button>
+</div>
+</div>
+<!-- CARTE 4: #3990 Fleur -->
+<div class="animal-card bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center shrink-0">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-on-surface-variant">Boucle</span>
+<span class="font-ear-tag-display text-ear-tag-display leading-tight">#3990</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface">Fleur</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-0.5 rounded">Lactation 4</span>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded">12 Jours en lait (Frais vêlée)</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">monitor_heart</span>
+<span class="font-semibold text-primary">Post-partum • Suspicion Cétose sous-clinique</span>
+<span>• Ingestion en baisse de 14%</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">bloodtype</span>
+<span>Test BHB sanguin</span>
+</span>
+</div>
+</div>
+<!-- LIGNE D'ACTIONS RAPIDES TACTILES -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+<button class="h-14 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">vaccines</span>
+<span>Propylène Glycol</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">monitor_weight</span>
+<span>Note NEC (1-5)</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">edit_note</span>
+<span>Noter test</span>
+</button>
+<button class="h-14 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-tactile text-label-tactile flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+<span>Valider</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODALE / TIROIR DE SAISIE RAPIDE IN-SITU (DISSIMULÉ PAR DÉFAUT) -->
+<div class="hidden bg-surface-container-lowest p-6 rounded-xl shadow-lg border-2 border-primary" id="quick-add-modal">
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px] text-primary">add_box</span>
+<span class="font-headline-md text-headline-md text-on-surface">Ajout d'un animal imprévu en cours de visite</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div>
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Numéro de boucle</label>
+<input class="w-full h-14 mt-1 px-4 rounded-lg bg-surface-container font-headline-md text-headline-md text-on-surface outline-none focus:ring-2 focus:ring-primary" placeholder="Ex: #4412" type="text"/>
+</div>
+<div>
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Motif de consultation</label>
+<select class="w-full h-14 mt-1 px-4 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface outline-none focus:ring-2 focus:ring-primary">
+Choix d'examen
+<option>Boiterie / Parage curatif</option>
+<option>Mammite clinique</option>
+<option>Chaleur silencieuse / Palpation</option>
+<option>Examen post-partum</option>
+</select>
+</div>
+<div class="flex items-end">
+<button class="w-full h-14 rounded-lg bg-primary text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">playlist_add</span>
+<span>Insérer dans la tournée</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- VOLET LATÉRAL : HISTORIQUE, ALERTES RÉGIE ET RÉFÉRENCES (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- HISTORIQUE DES 3 DERNIÈRES VISITES -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-primary">history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Visites antérieures</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Estrie - Secteur 4</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- VISITE 1 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">12 septembre 2025</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded">Régie mensuelle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">14 DG effectués (11 gestantes, 78% taux conception). Vaccination génisses de renouvellement.</p>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-badge text-label-badge pt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Dre Émilie Gagnon • Rapport transmis</span>
+</div>
+</div>
+<!-- VISITE 2 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">14 août 2025</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge px-2 py-0.5 rounded">Urgence / Suivi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Contrôle mammites d'été robot #1 (Streptococcus uberis). Ajustement du protocole de désinfection des manchons.</p>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-badge text-label-badge pt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Dr Martin Roy • Rapport archivé</span>
+</div>
+</div>
+<!-- VISITE 3 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">02 juillet 2025</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded">Bilan semestriel</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bilan repro global : intervalle vêlage-vêlage 398j. Score de remplissage du rumen satisfaisant.</p>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-badge text-label-badge pt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Dre Émilie Gagnon • Rapport archivé</span>
+</div>
+</div>
+</div>
+<button class="w-full h-12 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-body-sm text-body-sm font-bold flex items-center justify-center gap-2 transition-colors">
+<span>Consulter les archives complètes (2 ans)</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- ALERTES DE RÉGIE & LOGETTES DU TROUPEAU -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-tertiary-container">notifications_active</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Alertes de régie</h3>
+</div>
+<div class="flex flex-col gap-3">
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-tertiary-container shrink-0 mt-0.5">grass</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Ration de transition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Surveiller l'apport en sel anionique chez les taries à 21j avant vêlage.</span>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0 mt-0.5">cleaning_services</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Hygiène des logettes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Renouvellement litière de ripe sèche préconisé (section Est).</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COORDONNÉES ÉQUIPE SOIGNANTE ET STATUT AUTONOME -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-primary">clinical_notes</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Équipe assignée</h3>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold">
+            EG
+          </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Dre Émilie Gagnon, m.v.</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Clinique Vétérinaire des Appalaches</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm px-2 pt-1">
+<span>Urgence clinique 24/7 :</span>
+<span class="font-bold text-on-surface">819-555-0199</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // INTERACTIONS TACTILES ROBUSTES POUR TERRAIN
+  (function initHerdScreen() {
+    const resumeBtn = document.getElementById('resume-visit-btn');
+    const addBtn = document.getElementById('add-unplanned-btn');
+    const modal = document.getElementById('quick-add-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const filterChips = document.querySelectorAll('.filter-chip');
+
+    // Toggle Modal de saisie rapide d'animal imprévu
+    if (addBtn && modal && closeBtn) {
+      addBtn.addEventListener('click', () => {
+        modal.classList.toggle('hidden');
+        if (!modal.classList.contains('hidden')) {
+          modal.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+    }
+
+    // Gestion active des filtres tactiles
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      });
+    });
+
+    // Retour haptique / visuel immédiat sur le bouton de reprise de visite
+    if (resumeBtn) {
+      resumeBtn.addEventListener('click', () => {
+        resumeBtn.classList.add('ring-4', 'ring-primary-fixed');
+        setTimeout(() => {
+          resumeBtn.classList.remove('ring-4', 'ring-primary-fixed');
+          const firstPendingCard = document.querySelector('.animal-card');
+          if (firstPendingCard) {
+            firstPendingCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstPendingCard.classList.add('outline', 'outline-2', 'outline-primary');
+            setTimeout(() => {
+              firstPendingCard.classList.remove('outline', 'outline-2', 'outline-primary');
+            }, 1800);
+          }
+        }, 200);
+      });
+    }
+  })();
+</script></main></div></body></html>

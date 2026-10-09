@@ -1,0 +1,23 @@
+# .copilotignore is an undocumented team convention; its effect depends on the tool and mode.
+# It does not replace repository/org content exclusion, .gitignore, explicit instructions, or human review.
+
+# Secrets, certificates, and local configuration
+.env
+.env.*
+*.pfx
+*.snk
+appsettings.*.local.json
+
+# Real farm and producer data
+data/reel/
+exports/
+**/*-reel.csv
+
+# Large files with no value for AI
+**/wwwroot/lib/**
+*.min.js
+*.min.css
+*.map
+# Stitch-generated HTML snapshots; keep screen.png and DESIGN.md available as visual references.
+design/stich_*/**/code.html
+design/stitch/**/*.html

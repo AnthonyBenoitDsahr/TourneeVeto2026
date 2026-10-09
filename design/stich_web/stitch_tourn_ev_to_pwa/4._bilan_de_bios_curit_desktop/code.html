@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-fixed":"#311300","secondary":"#3c6377","error-container":"#ffdad6","surface":"#f1fcf4","secondary-fixed-dim":"#a4cce3","on-secondary-fixed":"#001e2b","surface-container-high":"#dfebe3","tertiary-container":"#5b2900","on-tertiary-container":"#f2822e","surface-variant":"#dae5dd","inverse-primary":"#a5d0ba","primary":"#00281a","on-secondary":"#ffffff","inverse-surface":"#28332d","error":"#ba1a1a","primary-fixed-dim":"#a5d0ba","on-error-container":"#93000a","on-background":"#141e19","secondary-container":"#bde5fd","on-secondary-container":"#41677c","surface-bright":"#f1fcf4","primary-container":"#163e2e","on-error":"#ffffff","on-secondary-fixed-variant":"#234b5e","tertiary-fixed-dim":"#ffb689","surface-container-low":"#ebf6ee","on-primary-fixed":"#002115","tertiary-fixed":"#ffdbc7","surface-tint":"#3f6654","on-primary-fixed-variant":"#274e3d","tertiary":"#3b1800","surface-container":"#e5f1e8","on-surface-variant":"#414844","on-tertiary-fixed-variant":"#733500","on-surface":"#141e19","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-tertiary":"#ffffff","on-primary-container":"#80a994","surface-dim":"#d1ddd5","background":"#f1fcf4","surface-container-highest":"#dae5dd","outline-variant":"#c1c8c2","inverse-on-surface":"#e8f4eb","outline":"#717974","primary-fixed":"#c1ecd5","secondary-fixed":"#c1e8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"2rem","margin":"1rem","margin-tablet":"1.5rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-md":"0.75rem","gutter":"1rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-badge":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"label-tactile":["Inter"],"body-lg":["Inter"],"ear-tag-display":["Inter"],"headline-lg":["Inter"]},"fontSize":{"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"700"}],"label-badge":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-tactile":["16px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"26px","fontWeight":"500"}],"ear-tag-display":["32px",{"lineHeight":"36px","letterSpacing":"0.04em","fontWeight":"900"}],"headline-lg":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between pt-6 pb-6"><div class="flex flex-col"><div class="px-6 pb-6 flex items-center gap-3"><div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_0px_#141e19]"><span class="material-symbols-outlined text-[26px]">medical_services</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-tight">TournéeVéto</span><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Santé du troupeau</span></div></div><div class="px-4 py-2"><div class="p-3 bg-surface-container rounded-lg flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span class="font-body-sm text-body-sm text-on-surface">Session active</span></div><span class="font-label-badge text-label-badge bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">v2.4 field</span></div></div><nav class="mt-4 px-4 flex flex-col gap-2" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[0_2px_0px_#141e19]"><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="tournee-du-jour" href="#"><span class="material-symbols-outlined text-[24px]">route</span><span class="font-body-md text-body-md">Tournée du jour</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="fiches-delevage" href="#"><span class="material-symbols-outlined text-[24px]">agriculture</span><span class="font-body-md text-body-md">Fiches d'élevage</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="grille-de-regie" href="#"><span class="material-symbols-outlined text-[24px]">table_chart</span><span class="font-body-md text-body-md">Grille de régie</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="bilan-de-biosecurite" href="#"><span class="material-symbols-outlined text-[24px]">health_and_safety</span><span class="font-body-md text-body-md">Bilan de biosécurité</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="rapport-de-visite" href="#"><span class="material-symbols-outlined text-[24px]">description</span><span class="font-body-md text-body-md">Rapport de visite</span></a><a class="flex items-center gap-3 px-4 py-3.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors min-h-[56px]" data-path="apercu-et-impression" href="#"><span class="material-symbols-outlined text-[24px]">print</span><span class="font-body-md text-body-md">Aperçu &amp; Impression</span></a></nav></div><div class="px-4 flex flex-col gap-3"><div class="p-3 bg-surface-container rounded-lg flex flex-col gap-1"><span class="font-body-sm text-body-sm text-on-surface">Région Estrie</span><span class="font-label-badge text-label-badge text-on-surface-variant">Secteur Coaticook &amp; environs</span></div><div class="flex items-center justify-between px-2 pt-2 text-on-surface-variant font-body-sm text-body-sm"><span>Synchronisation auto</span><span class="material-symbols-outlined text-[20px] text-primary">sync_saved_locally</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span><span class="font-body-sm text-body-sm font-semibold">Mardi 14 oct. 2025</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[18px] text-secondary">cloud</span><span class="font-body-sm text-body-sm">Coaticook 8°C</span></div><div class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[18px] text-primary">save</span><span class="font-label-badge text-label-badge uppercase tracking-wide">Mode hors-ligne actif (SQLite local)</span></div></div><div class="flex items-center gap-4"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-bold text-on-surface leading-tight">Dre Émilie Gagnon, m.v.</span><span class="font-label-badge text-label-badge text-on-surface-variant">Médecine des ruminants</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative w-full pt-16 bg-surface px-margin-desktop"><div class="flex flex-col w-full pb-16">
+<!-- Top Quick Strip / Operational Context -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary-fixed-dim animate-pulse"></div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Module Clinique Terrain</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Audit sanitaire trimestriel — Régie laitière Estrie</span>
+</div>
+<!-- Offline Persistence State Indicator -->
+<div class="flex items-center gap-3 bg-surface-container px-4 py-2 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">cloud_sync</span>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">SQLite Local chiffré</span>
+</div>
+<span class="text-on-surface-variant">|</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-body-sm text-body-sm" id="timestamp-badge">14 oct. 2025, 09:42:15</span>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded">SYNC OK</span>
+</div>
+</div>
+<!-- Primary Header & Progression Hero Strip -->
+<div class="relative bg-surface-container-low rounded-xl p-6 lg:p-8 mb-8 shadow-sm overflow-hidden">
+<!-- Subtle Ambient Backdrop Illustration -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none flex items-center justify-end pr-8">
+<svg class="h-64 w-64 text-primary" fill="currentColor" viewbox="0 0 200 200">
+<path d="M100 15 C45 15 15 45 15 100 C15 155 45 185 100 185 C155 185 185 155 185 100 C185 45 155 15 100 15 Z M100 35 C140 35 165 60 165 100 C165 140 140 165 100 165 C60 165 35 140 35 100 C35 60 60 35 100 35 Z"></path>
+<path d="M90 60 L140 100 L90 140 Z" opacity="0.4"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-badge uppercase tracking-wider">
+            Élevage Hostein &amp; Jersey
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">N° Permis MAPAQ : QC-849201</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+          Ferme Bel-Horizon • Bilan biosécurité d'étable
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Contrôle des barrières sanitaires externes, flux d'étable, aire de vêlage et conformité du protocole de régie vétérinaire.
+        </p>
+</div>
+<!-- Live Progression Gauge / Stats Cluster -->
+<div class="flex items-center gap-6 bg-surface-container-lowest p-5 rounded-xl shadow-md min-w-[320px]">
+<div class="relative flex items-center justify-center">
+<!-- Circular SVG Gauge (83% = 5/6 points) -->
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 72 72">
+<circle class="text-surface-variant" cx="36" cy="36" fill="none" r="30" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary-container transition-all duration-700 ease-out" cx="36" cy="36" fill="none" id="gauge-circle" r="30" stroke="currentColor" stroke-dasharray="188.5" stroke-dashoffset="31.4" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md font-extrabold text-primary leading-none" id="gauge-pct">83%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary" id="completed-count">5</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-bold">/ 6 critères</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Progression d'audit</span>
+<div class="flex items-center gap-1.5 mt-1 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm font-bold">Jauge sanitaire : Satisfaisant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Responsive Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: The 6 Biosafety Audit Points (7 Cols on XL) -->
+<section class="xl:col-span-7 flex flex-col gap-5">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">fact_check</span>
+<h2 class="font-headline-md text-headline-md text-primary">Grille d'évaluation clinique</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Touches tactiles • Spécial gants de stabulation</span>
+</div>
+<!-- CRITÈRE 1: Sas d'entrée & tenue dédiée -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm">1</span>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Sas d'entrée &amp; tenue dédiée aux visiteurs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pédiluve fonctionnel, vestiaire propre, bottes propres</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container text-primary-container font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Conforme
+          </span>
+</div>
+<!-- 3-Segment Glove-Friendly Control -->
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À corriger
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">edit_note</span>
+<div class="flex flex-col w-full">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Observation vétérinaire enregistrée</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">Bottes nettoyées, désinfectant renouvelé ce matin (solution iodée active).</p>
+</div>
+</div>
+</article>
+<!-- CRITÈRE 2: Aire de vêlage & litière (À améliorer / Amber Alert) -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-sm">2</span>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Aire de vêlage &amp; litière des nouveau-nés</h3>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">notification_important</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Propreté du paillage, désinfection entre deux vêlages, logettes</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span> À améliorer
+          </span>
+</div>
+<!-- 3-Segment Glove-Friendly Control -->
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-tertiary-container text-on-tertiary-container font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm font-bold" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À améliorer
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<!-- Alert Notification Panel (Amber / Tertiary) -->
+<div class="bg-tertiary-fixed/30 p-4 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-[24px] mt-0.5">priority_high</span>
+<div class="flex flex-col w-full">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-tertiary-fixed font-bold uppercase tracking-wide">Alerte Sanitaire — Risque colibacillose</span>
+<span class="font-label-badge text-label-badge bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">Priorité Élevée</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold mt-1">Litière abondante requise d'urgence, renouveler intégralement le box n°2 avant la mise bas prévue ce soir.</p>
+<div class="mt-2 flex items-center gap-2 text-on-tertiary-fixed font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Recommandation : Rajouter 3 ballots de paille sèche + chaulage préventif du sol.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- CRITÈRE 3: Isolement des malades & achats extérieurs -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm">3</span>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Isolement des malades &amp; sas de quarantaine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Box d'infirmerie physiquement séparé, gestion du fumier dédié</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container text-primary-container font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Conforme
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À améliorer
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">edit_note</span>
+<div class="flex flex-col w-full">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Observation vétérinaire enregistrée</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">Infirmerie vide et assainie. Matériel de traite pour vaches traitées étiqueté en rouge.</p>
+</div>
+</div>
+</article>
+<!-- CRITÈRE 4: Abreuvement & propreté des auges -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm">4</span>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Abreuvement, débit &amp; propreté des auges</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Contrôle de limpidité, absence de biofilms, débit min. 15L/min</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container text-primary-container font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Conforme
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À corriger
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">edit_note</span>
+<div class="flex flex-col w-full">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Observation vétérinaire enregistrée</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">Bassins basculants propres, purge hebdomadaire effectuée. Analyse d'eau du puits conforme aux normes.</p>
+</div>
+</div>
+</article>
+<!-- CRITÈRE 5: Zone d'équarrissage & accès camion -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm">5</span>
+<div>
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Zone d'équarrissage &amp; ramassage mort-nés</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accès camion en périphérie sans franchissement de l'aire d'alimentation</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container text-primary-container font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Conforme
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À corriger
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface-variant font-label-tactile text-label-tactile flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">edit_note</span>
+<div class="flex flex-col w-full">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Observation vétérinaire enregistrée</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">Bac réfrigéré fermé hermétiquement à l'entrée du chemin de terre. Camion Sanimax ne pénètre pas sur cour de service.</p>
+</div>
+</div>
+</article>
+<!-- CRITÈRE 6: Contrôle des rongeurs & oiseaux (En cours d'évaluation interactif) -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-md flex flex-col gap-4 relative overflow-hidden" id="item-6-card">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-sm flex items-center justify-center animate-pulse" id="badge-step-6">6</span>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-body-lg text-body-lg font-bold text-on-surface">Contrôle des rongeurs, oiseaux &amp; animaux errants</h3>
+<span class="font-label-badge text-label-badge bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">En cours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Boîtes d'appâtage numérotées, filets anti-passereaux, stockage grains</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge flex items-center gap-1" id="status-chip-6">
+<span class="material-symbols-outlined text-[16px]">pending</span> À évaluer
+          </span>
+</div>
+<!-- Dynamic Toggles with JavaScript Hooks -->
+<div class="grid grid-cols-3 gap-2">
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-primary-container hover:text-on-primary transition-all active:scale-95 shadow-sm" id="btn-c6-conforme" onclick="selectAuditStatus('conforme')" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span> Conforme
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-tertiary-container hover:text-on-tertiary-container transition-all active:scale-95 shadow-sm" id="btn-c6-ameliorer" onclick="selectAuditStatus('ameliorer')" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span> À corriger
+          </button>
+<button class="min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm" id="btn-c6-na" onclick="selectAuditStatus('na')" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span> N/A
+          </button>
+</div>
+<!-- Observation Input Area -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase flex items-center gap-1" for="obs-6">
+<span class="material-symbols-outlined text-[16px]">edit</span> Note d'inspection en direct
+            </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1" id="save-status-indicator">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span> Autosave prêt
+            </span>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low rounded-lg p-3.5 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner resize-none" id="obs-6" oninput="handleObservationInput()" placeholder="Inscrire les constatations sur les appâts, traces de souris ou présence de filets au grenier..." rows="3"></textarea>
+</div>
+</div>
+</article>
+</section>
+<!-- RIGHT COLUMN: Synthesis, Local Offline Engine & AMVPQ Guidelines (5 Cols on XL) -->
+<aside class="xl:col-span-5 flex flex-col gap-6">
+<!-- Synthèse de biosécurité en direct -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[24px]">analytics</span>
+<h3 class="font-headline-md text-headline-md text-primary">Synthèse en direct</h3>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2.5 py-1 rounded">
+            En direct
+          </span>
+</div>
+<!-- Metrics cards row -->
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm font-semibold">Conformes</span>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<span class="font-ear-tag-display text-ear-tag-display text-primary leading-tight" id="synth-conforme-count">5</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Sur 6 critères vérifiés</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm font-semibold">À corriger</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">warning</span>
+</div>
+<span class="font-ear-tag-display text-ear-tag-display text-on-tertiary-container leading-tight" id="synth-alert-count">1</span>
+<span class="font-label-badge text-label-badge text-on-tertiary-fixed font-bold">1 action corrective</span>
+</div>
+</div>
+<!-- Inline SVG Mini Distribution Chart -->
+<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<span class="font-semibold">Indice d'étanchéité biologique</span>
+<span class="font-bold text-primary" id="score-text">83 / 100</span>
+</div>
+<!-- Bar gauge -->
+<div class="w-full h-3 bg-surface-variant rounded-full overflow-hidden flex">
+<div class="h-full bg-primary transition-all duration-500" id="bar-conforme" style="width: 83.3%;"></div>
+<div class="h-full bg-on-tertiary-container transition-all duration-500" id="bar-warning" style="width: 16.7%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-badge text-label-badge pt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 83% Maîtrisé</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> 17% Vigilance</span>
+</div>
+</div>
+<!-- Farm photo visual record placeholder -->
+<div class="relative rounded-xl overflow-hidden shadow-sm h-36">
+<img class="w-full h-full object-cover" data-alt="High quality wide photo inside a modern, spotless, clean Quebec free-stall dairy barn with bright LED lights, sand bedded stalls, and clean concrete alleys, professional agricultural photography, realistic farm setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbKl1QZar8HKxCdFyBPuvVR5eiX-D5aSnZIrAejhAzbL4lL7qpaN6eDiyw1NQrmc_WFjYXawiu5GLRJ9Xx1HwmQM2xfIB7otKR2EE4zuMbxld2fGJM_Pc6OZGBIktnKaiN8k1VYCAwdAfP45a2NjHNcrj4oRhzibnHL0L13fRbzsG8XQIvjYu9mxlHgkx7h-NmGWLgp9WO8xT9CEgngldDk3FskbY6WbHJL8p9eusn6jU0IGwqhayfMA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-3">
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span class="font-body-sm text-body-sm font-semibold">Photothèque sanitaire rattachée (2 clichés)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Encadré Protection Données Hors-ligne & SQLite -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">storage</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface leading-tight">Persistance SQLite embarquée</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tolérance 100% perte de réseau métallique</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+          Toutes les saisies tactiles et notes d'audit sont immédiatement journalisées dans la base locale SQLite du terminal. Zéro latence, zéro risque d'écrasement lors du passage entre les travées.
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Espace tampon</span>
+<span class="font-body-sm text-body-sm font-bold text-primary">12.4 Ko utilisés</span>
+</div>
+<!-- Gloved Interactive Test Button -->
+<button class="min-h-[56px] px-4 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-tactile text-label-tactile flex items-center gap-2 shadow-sm active:scale-95" id="btn-test-backup" onclick="testLocalDatabaseBackup()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="backup-icon">downloading</span>
+<span id="backup-btn-text">Tester la sauvegarde</span>
+</button>
+</div>
+<!-- Backup Status Live Banner (Hidden by default, triggered by JS) -->
+<div class="hidden bg-surface-container-high p-3 rounded-lg flex items-center gap-2 text-primary font-body-sm text-body-sm" id="backup-feedback">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+<span>Instantané SQLite écrit avec succès dans le fichier local (0 erreurs).</span>
+</div>
+</div>
+<!-- Recommandations Réglementaires AMVPQ & MAPAQ -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[24px]">gavel</span>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface">Cadre AMVPQ &amp; MAPAQ (Québec)</h4>
+</div>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified_user</span>
+<span><strong>Protocole AMVPQ 2024-R3 :</strong> La tenue d'un registre de biosécurité à jour conditionne l'accès aux attestations d'exportation d'animaux vivants.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified_user</span>
+<span><strong>Loi P-42 :</strong> Obligation de notifier toute suspicion de maladie à déclaration obligatoire (MDO) dans un délai de 24 heures ouvrables.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">article</span>
+<span><strong>Programme proAction® :</strong> Volet Biosécurité validé pour le renouvellement du certificat producteur Les Producteurs de lait du Québec (PLQ).</span>
+</li>
+</ul>
+</div>
+<!-- Bouton d'action principal final -->
+<div class="pt-2">
+<button class="w-full min-h-[56px] rounded-xl bg-primary text-on-primary hover:bg-primary-container transition-all shadow-md font-label-tactile text-label-tactile flex items-center justify-center gap-3 active:scale-[0.98]" onclick="finalizeAuditReport()" type="button">
+<span>Terminer le bilan et rédiger le rapport</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant mt-2.5">
+          Génère instantanément le rapport PDF prêt pour signature conjointe avec l'éleveur.
+        </p>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // State tracking for Criterion 6 and overall completion
+  let auditStatus6 = null;
+  let hasCompletedStep6 = false;
+
+  function selectAuditStatus(status) {
+    auditStatus6 = status;
+    const btnConforme = document.getElementById('btn-c6-conforme');
+    const btnAmeliorer = document.getElementById('btn-c6-ameliorer');
+    const btnNa = document.getElementById('btn-c6-na');
+    const statusChip = document.getElementById('status-chip-6');
+    const badgeStep = document.getElementById('badge-step-6');
+    const completedCountEl = document.getElementById('completed-count');
+    const gaugePctEl = document.getElementById('gauge-pct');
+    const gaugeCircle = document.getElementById('gauge-circle');
+    const synthConformeCount = document.getElementById('synth-conforme-count');
+    const synthAlertCount = document.getElementById('synth-alert-count');
+    const barConforme = document.getElementById('bar-conforme');
+    const barWarning = document.getElementById('bar-warning');
+    const scoreText = document.getElementById('score-text');
+
+    // Reset base button styling
+    btnConforme.className = 'min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-primary-container hover:text-on-primary transition-all active:scale-95 shadow-sm';
+    btnAmeliorer.className = 'min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-tertiary-container hover:text-on-tertiary-container transition-all active:scale-95 shadow-sm';
+    btnNa.className = 'min-h-[56px] rounded-lg bg-surface-container text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 hover:bg-surface-variant hover:text-on-surface transition-all active:scale-95 shadow-sm';
+
+    badgeStep.classList.remove('animate-pulse');
+
+    if (status === 'conforme') {
+      btnConforme.className = 'min-h-[56px] rounded-lg bg-primary-container text-on-primary font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm font-bold';
+      statusChip.className = 'self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container text-primary-container font-label-badge text-label-badge flex items-center gap-1';
+      statusChip.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span> Conforme';
+      synthConformeCount.textContent = '6';
+      synthAlertCount.textContent = '1';
+      scoreText.textContent = '86 / 100';
+      barConforme.style.width = '85.7%';
+      barWarning.style.width = '14.3%';
+    } else if (status === 'ameliorer') {
+      btnAmeliorer.className = 'min-h-[56px] rounded-lg bg-tertiary-container text-on-tertiary-container font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm font-bold';
+      statusChip.className = 'self-start sm:self-auto px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge flex items-center gap-1';
+      statusChip.innerHTML = '<span class="material-symbols-outlined text-[16px]">warning</span> À corriger';
+      synthConformeCount.textContent = '5';
+      synthAlertCount.textContent = '2';
+      scoreText.textContent = '71 / 100';
+      barConforme.style.width = '71.4%';
+      barWarning.style.width = '28.6%';
+    } else {
+      btnNa.className = 'min-h-[56px] rounded-lg bg-surface-variant text-on-surface font-label-tactile text-label-tactile flex items-center justify-center gap-2 shadow-sm font-bold';
+      statusChip.className = 'self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge flex items-center gap-1';
+      statusChip.innerHTML = '<span class="material-symbols-outlined text-[16px]">block</span> Non applicable';
+      synthConformeCount.textContent = '5';
+      synthAlertCount.textContent = '1';
+      scoreText.textContent = '83 / 100';
+    }
+
+    // Update gauge to 100% completion (6/6 criteria assessed)
+    completedCountEl.textContent = '6';
+    gaugePctEl.textContent = '100%';
+    gaugeCircle.style.strokeDashoffset = '0';
+
+    updateLocalTimestamp();
+  }
+
+  function handleObservationInput() {
+    const indicator = document.getElementById('save-status-indicator');
+    indicator.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">sync</span> Enregistrement...';
+    setTimeout(() => {
+      indicator.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span> Sauvegardé en SQLite';
+      updateLocalTimestamp();
+    }, 600);
+  }
+
+  function updateLocalTimestamp() {
+    const badge = document.getElementById('timestamp-badge');
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const mins = String(now.getMinutes()).padStart(2, '0');
+    const secs = String(now.getSeconds()).padStart(2, '0');
+    badge.textContent = `14 oct. 2025, ${hours}:${mins}:${secs}`;
+  }
+
+  function testLocalDatabaseBackup() {
+    const btn = document.getElementById('btn-test-backup');
+    const btnText = document.getElementById('backup-btn-text');
+    const icon = document.getElementById('backup-icon');
+    const feedback = document.getElementById('backup-feedback');
+
+    btnText.textContent = 'Vérification SQLite...';
+    icon.textContent = 'autorenew';
+    icon.classList.add('animate-spin');
+
+    setTimeout(() => {
+      btnText.textContent = 'Base vérifiée (OK)';
+      icon.textContent = 'check_circle';
+      icon.classList.remove('animate-spin');
+      feedback.classList.remove('hidden');
+      updateLocalTimestamp();
+
+      setTimeout(() => {
+        btnText.textContent = 'Tester la sauvegarde';
+        icon.textContent = 'downloading';
+      }, 4000);
+    }, 800);
+  }
+
+  function finalizeAuditReport() {
+    if (!auditStatus6) {
+      alert('Veuillez évaluer le critère n°6 (Rongeurs & oiseaux) avant de clôturer le rapport.');
+      document.getElementById('item-6-card').scrollIntoView({ behavior: 'smooth' });
+    } else {
+      alert('Bilan de biosécurité validé avec succès. Redirection vers la rédaction du rapport de visite pour Ferme Bel-Horizon...');
+    }
+  }
+</script></main></div></body></html>
